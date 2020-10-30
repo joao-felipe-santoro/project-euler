@@ -7,6 +7,6 @@ describe('Problem 002', function () {
     expect(problem002(10)).to.equal(44)
   })
   it('Should return 4613732 as the sum of all even Fibonacci terms that does not exceed 4 millions.', function () {
-    expect(problem002(32)).to.equal(4613732)
+    expect(problem002(33)).to.equal(4613732)
   })
 })
