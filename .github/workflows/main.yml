@@ -29,3 +29,19 @@ jobs:
       run: npm install
     - name: Testing app...
       run: npm test
+  coverage:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - uses: actions/checkout@master
+      with:
+        node-version: ${{ matrix.node-version }}
+        file: 
+    - name: Installing dependencies...
+      run: npm install
+    - name: Running Code Coverage...
+      run: npm test
+    - name: Upload report 
+      uses: codecov/codecov-action@v1
