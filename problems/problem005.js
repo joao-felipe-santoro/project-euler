@@ -7,8 +7,8 @@
 const { isPrime } = require('../helper/math')
 
 const solution = (numbers) => {
-  let dividers = []
-  let primeNumbers = [2]
+  const dividers = []
+  const primeNumbers = [2]
 
   numbers.sort((a, b) => { return a - b })
   // getting all primes until highest element of the array
