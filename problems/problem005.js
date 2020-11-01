@@ -34,7 +34,6 @@ const solution = (numbers) => {
       index++
     }
   }
-  console.log('dividers', dividers)
   return dividers.reduce((product, element) => product * element, 1)
 }
 
