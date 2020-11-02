@@ -8,15 +8,19 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 const solution = (sequence, size) => {
   let product
   let highestProduct = 0
-
+  let highestProductDigits = []
+  let digitsToWork
   for (let i = 0; i < sequence.length - size - 1; i++) {
-    product = Array.from(sequence.substring(i, i + size))
-      .map((element) => { return parseInt(element) })
-      .reduce((product, element) => product * element, 1)
+    digitsToWork = Array.from(sequence.substring(i, i + size))
+    digitsToWork = digitsToWork.map((element) => { return parseInt(element) })
+    product = digitsToWork.reduce((product, element) => product * element, 1)
 
-    highestProduct = product > highestProduct ? product : highestProduct
+    if (product > highestProduct) {
+      highestProduct = product
+      highestProductDigits = digitsToWork
+    }
   }
-
+  console.log('digits:', highestProductDigits)
   return highestProduct
 }
 
