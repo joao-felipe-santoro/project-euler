@@ -29,7 +29,7 @@
   "scripts": {
     "test": "nyc --reporter=lcov mocha ./tests --recursive",
     "coverage": "codecov",
-    "lint": "npx eslint ./**/*.js ./main.js",
-    "lint:fix": "npx eslint ./**/*.js ./main.js --fix"
+    "lint": "npx eslint ./**/*.mjs ./main.mjs",
+    "lint:fix": "npx eslint ./**/*.mjs ./main.mjs --fix"
   }
 }
