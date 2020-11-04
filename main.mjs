@@ -9,6 +9,7 @@ import { problem008 } from './problems/problem008.mjs'
 import { problem009 } from './problems/problem009.mjs'
 import { problem010 } from './problems/problem010.mjs'
 import { problem011 } from './problems/problem011.mjs'
+import { problem012 } from './problems/problem012.mjs'
 
 console.log(problem001(1_000))
 console.log(problem002(33))
@@ -43,3 +44,4 @@ const matrix = [[8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]]
 
 console.log(problem011(matrix, 4))
+console.log(problem012(5))
