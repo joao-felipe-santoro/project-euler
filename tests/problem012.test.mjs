@@ -12,4 +12,7 @@ describe('Problem 012', function () {
   it('Should return 6 as the first triangle number with over 3 divisors', function () {
     expect(problem012(3)).to.equal(6)
   })
+  it('Should return 76576500 as the first triangle number with over 500 divisors', function () {
+    expect(problem012(500)).to.equal(76576500)
+  })
 })
