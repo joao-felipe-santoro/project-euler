@@ -20,19 +20,35 @@ const solution = (numDivisors) => {
   const triangleNumbers = []
   const numbers = []
   let number = 1
-  while (divisors.length <= numDivisors) {
-    divisors = []
-    numbers.push(number)
-    triangleNumber = numbers.reduce((sum, element) => { return sum + element })
-    triangleNumbers.push(triangleNumber)
-    for (let i = 1; i <= triangleNumber; i++) {
-      if (triangleNumber % i === 0) {
-        divisors.push(i)
+  if (numDivisors < 5) {
+    // REFACTOR: Look into how to encapsulate portions of code below into functions and what not to remove code duplication.
+    while (divisors.length <= numDivisors) {
+      divisors = []
+      numbers.push(number)
+      triangleNumber = numbers.reduce((sum, element) => { return sum + element })
+      triangleNumbers.push(triangleNumber)
+      for (let i = 1; i <= triangleNumber; i++) {
+        if (triangleNumber % i === 0) {
+          divisors.push(i)
+        }
       }
+      number++
     }
-    number++
+  } else {
+    while (divisors.length <= Math.floor(numDivisors / 2)) {
+      divisors = []
+      numbers.push(number)
+      triangleNumber = numbers.reduce((sum, element) => { return sum + element })
+      triangleNumbers.push(triangleNumber)
+      for (let i = 1; i <= Math.sqrt(triangleNumber); i++) {
+        if (triangleNumber % i === 0) {
+          divisors.push(i)
+        }
+      }
+      number++
+    }
   }
-  console.log('divisors:', divisors)
+
   return triangleNumbers.pop()
 }
 
