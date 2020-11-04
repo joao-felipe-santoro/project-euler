@@ -1,3 +1,12 @@
+function fatorial (number) {
+  let product = 1n
+  while (number > 1n) {
+    product = product * number
+    number--
+  }
+  return product
+}
+
 function isPrime (number) {
   const sqRoot = Math.floor(Math.sqrt(number))
 
@@ -27,4 +36,4 @@ function isPalindrome (number) {
   return false
 }
 
-export { isPrime, isPalindrome }
+export { fatorial, isPrime, isPalindrome }
