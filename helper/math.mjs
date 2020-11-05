@@ -1,9 +1,36 @@
-function fatorial (number) {
-  let product = 1n
-  while (number > 1n) {
-    product = product * number
-    number--
+function collatzSequence (number, memo) {
+  let term = number
+  let iterations = 1
+  memo = memo || {}
+
+  while (term > 1) {
+    if (memo[term]) {
+      iterations += memo[term]
+      break
+    }
+    if (term % 2 === 1) {
+      term = term * 3 + 1
+      iterations++
+    }
+    term = term / 2
+    iterations++
   }
+  memo[number] = iterations
+  return { iterations: iterations, memo: memo }
+}
+
+function factorial (number, memo) {
+  memo = memo || {}
+  let product
+  if (memo[number]) {
+    return memo[number]
+  }
+  if (number === 0n) {
+    return 1n
+  } else {
+    product = number * factorial(number - 1n)
+  }
+  memo[number] = product
   return product
 }
 
@@ -36,4 +63,4 @@ function isPalindrome (number) {
   return false
 }
 
-export { fatorial, isPrime, isPalindrome }
+export { collatzSequence, factorial, isPrime, isPalindrome }
