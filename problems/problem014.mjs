@@ -15,20 +15,16 @@ function solution (number) {
   let startingTerm = 0
   let highestCount = 0
   let memo = {}
-  const iterations = []
 
   let sequence = []
   for (let i = 2; i < number; i++) {
     sequence = collatzSequence(i, memo)
     memo = sequence.memo
-    iterations.push(sequence.iterations)
-  }
-  iterations.forEach((iteration) => {
-    if (highestCount < iteration.length) {
-      startingTerm = iteration[0]
-      highestCount = iteration.length
+    if (highestCount < sequence.iterations) {
+      startingTerm = i
+      highestCount = sequence.iterations
     }
-  })
+  }
   return startingTerm
 }
 

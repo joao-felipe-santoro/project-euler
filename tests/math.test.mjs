@@ -6,15 +6,15 @@ describe('Math', function () {
   describe('collatzSequence', function () {
     let memo = {}
     let response
-    it('Should return [13, 40, 20, 10, 5, 16, 8, 4, 2, 1] for 13', function () {
+    it('Should return 10 for 13', function () {
       response = collatzSequence(13, memo)
       memo = response.memo
-      expect(response.iterations).to.eql([13, 40, 20, 10, 5, 16, 8, 4, 2, 1])
+      expect(response.iterations).to.eql(10)
     })
-    it('Should return [16, 8, 4, 2, 1] for 16', function () {
+    it('Should return 5 for 16', function () {
       response = collatzSequence(16, memo)
       memo = response.memo
-      expect(response.iterations).to.eql([16, 8, 4, 2, 1])
+      expect(response.iterations).to.eql(5)
     })
   })
   describe('factorial', function () {

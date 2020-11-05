@@ -1,19 +1,19 @@
 function collatzSequence (number, memo) {
   let term = number
-  let iterations = [number]
+  let iterations = 1
   memo = memo || {}
-  while (term !== 1) {
-    if (term % 2 === 0) {
-      term = term / 2
-    } else {
-      term = term * 3 + 1
-    }
+
+  while (term > 1) {
     if (memo[term]) {
-      iterations = iterations.concat(memo[term])
+      iterations += memo[term]
       break
-    } else {
-      iterations.push(term)
     }
+    if (term % 2 === 1) {
+      term = term * 3 + 1
+      iterations++
+    }
+    term = term / 2
+    iterations++
   }
   memo[number] = iterations
   return { iterations: iterations, memo: memo }
