@@ -19,12 +19,18 @@ function collatzSequence (number, memo) {
   return { iterations: iterations, memo: memo }
 }
 
-function factorial (number) {
-  let product = 1n
-  while (number > 1n) {
-    product = product * number
-    number--
+function factorial (number, memo) {
+  memo = memo || {}
+  let product
+  if (memo[number]) {
+    return memo[number]
   }
+  if (number === 0n) {
+    return 1n
+  } else {
+    product = number * factorial(number - 1n)
+  }
+  memo[number] = product
   return product
 }
 

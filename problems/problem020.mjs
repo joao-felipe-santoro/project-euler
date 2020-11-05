@@ -7,7 +7,8 @@
 import { factorial } from '../helper/math.mjs'
 
 const solution = (num) => {
-  const fact = factorial(num)
+  const memo = {}
+  const fact = factorial(num, memo)
   return sumDigits(fact)
 }
 
