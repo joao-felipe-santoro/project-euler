@@ -13,15 +13,15 @@ describe('Problem 014', function () {
     expect(problem014(100)).to.equal(97)
   })
   it('Should return XX as max number of terms in collatz sequence up until a thousand', function () {
-    expect(problem014(1000)).to.equal(871)
+    expect(problem014(1e3)).to.equal(871)
   })
   it('Should return XX as max number of terms in collatz sequence up until 10 thousands', function () {
-    expect(problem014(10000)).to.equal(6171)
+    expect(problem014(1e4)).to.equal(6171)
   })
   it('Should return XX as max number of terms in collatz sequence up until 100 thousands', function () {
-    expect(problem014(100000)).to.equal(77031)
+    expect(problem014(1e5)).to.equal(77031)
   })
   it('Should return XX as max number of terms in collatz sequence up until 1 million', function () {
-    expect(problem014(1000000)).to.equal(837799)
+    expect(problem014(1e6)).to.equal(837799)
   })
 })
