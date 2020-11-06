@@ -1,5 +1,5 @@
 import pkg from 'chai'
-import { collatzSequence, factorial, isPrime, isPalindrome } from '../helper/math.js'
+import { collatzSequence, factorial, isPrime, isPalindrome, toText } from '../helper/math.js'
 const { expect } = pkg
 
 describe('Math', function () {
@@ -60,6 +60,62 @@ describe('Math', function () {
     })
     it('Should return true for 1001', function () {
       expect(isPalindrome(1001)).to.equal(true)
+    })
+  })
+  describe('toText', function () {
+    it('Should return "One" for 1', function () {
+      expect(toText(1)).to.equal('One')
+    })
+    it('Should return "Two" for 2', function () {
+      expect(toText(2)).to.equal('Two')
+    })
+    it('Should return "Three" for 3', function () {
+      expect(toText(3)).to.equal('Three')
+    })
+    it('Should return "Four" for 4', function () {
+      expect(toText(4)).to.equal('Four')
+    })
+    it('Should return "Five" for 5', function () {
+      expect(toText(5)).to.equal('Five')
+    })
+    it('Should return "Six" for 6', function () {
+      expect(toText(6)).to.equal('Six')
+    })
+    it('Should return "Seven" for 7', function () {
+      expect(toText(7)).to.equal('Seven')
+    })
+    it('Should return "Eight" for 8', function () {
+      expect(toText(8)).to.equal('Eight')
+    })
+    it('Should return "Nine" for 19', function () {
+      expect(toText(9)).to.equal('Nine')
+    })
+    it('Should return "Ten" for 10', function () {
+      expect(toText(10)).to.equal('Ten')
+    })
+    it('Should return "Eleven" for 11', function () {
+      expect(toText(11)).to.equal('Eleven')
+    })
+    it('Should return "OneHundred" for 100', function () {
+      expect(toText(100)).to.equal('OneHundred')
+    })
+    it('Should return "OneThousand" for 1000', function () {
+      expect(toText(1000)).to.equal('OneThousand')
+    })
+    it('Should return "OneThousandOneHundred" for 1100', function () {
+      expect(toText(1100)).to.equal('OneThousandOneHundred')
+    })
+    it('Should return "OneThousandOneHundredAndTen" for 1110', function () {
+      expect(toText(1110)).to.equal('OneThousandOneHundredAndTen')
+    })
+    it('Should return "OneThousandOneHundredAndEleven" for 1111', function () {
+      expect(toText(1111)).to.equal('OneThousandOneHundredAndEleven')
+    })
+    it('Should return "NineThousandNineHundredAndNinetyNine" for 9999', function () {
+      expect(toText(9999)).to.equal('NineThousandNineHundredAndNinetyNine')
+    })
+    it('Should return "ThreeHundredAndFortyTwo" for 342', function () {
+      expect(toText(342)).to.equal('ThreeHundredAndFortyTwo')
     })
   })
 })
