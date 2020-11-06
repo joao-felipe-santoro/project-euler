@@ -15,41 +15,36 @@ Let us list the factors of the first seven triangle numbers:
 */
 
 const solution = (numDivisors) => {
-  let divisors = []
-  let triangleNumber
-  const triangleNumbers = []
-  const numbers = []
+  let divisors = 0
+  let triangleNumber = 0
   let number = 1
+
   if (numDivisors < 5) {
     // REFACTOR: Look into how to encapsulate portions of code below into functions and what not to remove code duplication.
-    while (divisors.length <= numDivisors) {
-      divisors = []
-      numbers.push(number)
-      triangleNumber = numbers.reduce((sum, element) => { return sum + element })
-      triangleNumbers.push(triangleNumber)
+    while (divisors <= numDivisors) {
+      divisors = 0
+      triangleNumber += number
       for (let i = 1; i <= triangleNumber; i++) {
         if (triangleNumber % i === 0) {
-          divisors.push(i)
+          divisors++
         }
       }
       number++
     }
   } else {
-    while (divisors.length <= Math.floor(numDivisors / 2)) {
-      divisors = []
-      numbers.push(number)
-      triangleNumber = numbers.reduce((sum, element) => { return sum + element })
-      triangleNumbers.push(triangleNumber)
+    while (divisors <= Math.floor(numDivisors / 2)) {
+      divisors = 0
+      triangleNumber += number
       for (let i = 1; i <= Math.sqrt(triangleNumber); i++) {
         if (triangleNumber % i === 0) {
-          divisors.push(i)
+          divisors++
         }
       }
       number++
     }
   }
 
-  return triangleNumbers.pop()
+  return triangleNumber
 }
 
 export function problem012 (numDivisors) {
