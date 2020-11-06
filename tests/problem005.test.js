@@ -1,5 +1,5 @@
 import pkg from 'chai'
-import { problem005 } from '../problems/problem005.mjs'
+import { problem005 } from '../problems/problem005.js'
 const { expect } = pkg
 
 describe('Problem 005', function () {

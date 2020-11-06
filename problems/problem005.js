@@ -4,7 +4,7 @@
   What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 */
 
-import { isPrime } from '../helper/math.mjs'
+import { isPrime } from '../helper/math.js'
 
 const solution = (numbers) => {
   const dividers = []

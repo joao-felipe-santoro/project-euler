@@ -4,7 +4,7 @@
   Find the sum of all the primes below two million.
 */
 
-import { isPrime } from '../helper/math.mjs'
+import { isPrime } from '../helper/math.js'
 
 const solution = (number) => {
   let sum = 2

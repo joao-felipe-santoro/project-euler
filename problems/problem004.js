@@ -4,7 +4,7 @@
   Find the largest palindrome made from the product of two 3-digit numbers.
 */
 
-import { isPalindrome } from '../helper/math.mjs'
+import { isPalindrome } from '../helper/math.js'
 
 const solution = (digits) => {
   let floor = 1

@@ -1,5 +1,5 @@
 import pkg from 'chai'
-import { fibonacci } from '../helper/fibonacci.mjs'
+import { fibonacci } from '../helper/fibonacci.js'
 const { expect } = pkg
 
 describe('Fibonacci', function () {

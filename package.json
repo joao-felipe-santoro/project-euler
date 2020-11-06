@@ -2,6 +2,7 @@
   "name": "project-euler",
   "version": "1.0.0",
   "description": "project-euler",
+  "type": "module",
   "main": "main.js",
   "repository": {
     "type": "git",
@@ -29,7 +30,7 @@
   "scripts": {
     "test": "nyc --reporter=lcov mocha ./tests --recursive",
     "coverage": "codecov",
-    "lint": "npx eslint ./**/*.mjs ./main.mjs",
-    "lint:fix": "npx eslint ./**/*.mjs ./main.mjs --fix"
+    "lint": "npx eslint ./**/*.js ./main.js",
+    "lint:fix": "npx eslint ./**/*.js ./main.js --fix"
   }
 }

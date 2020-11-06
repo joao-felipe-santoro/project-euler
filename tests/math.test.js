@@ -1,5 +1,5 @@
 import pkg from 'chai'
-import { collatzSequence, factorial, isPrime, isPalindrome } from '../helper/math.mjs'
+import { collatzSequence, factorial, isPrime, isPalindrome } from '../helper/math.js'
 const { expect } = pkg
 
 describe('Math', function () {

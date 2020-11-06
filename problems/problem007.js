@@ -4,7 +4,7 @@
   What is the 10 001st prime number?
 */
 
-import { isPrime } from '../helper/math.mjs'
+import { isPrime } from '../helper/math.js'
 
 const solution = (num) => {
   const primes = [2]

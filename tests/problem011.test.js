@@ -1,5 +1,5 @@
 import pkg from 'chai'
-import { problem011 } from '../problems/problem011.mjs'
+import { problem011 } from '../problems/problem011.js'
 const { expect } = pkg
 
 const matrix20by20 = [[8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],

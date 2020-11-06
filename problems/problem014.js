@@ -9,7 +9,7 @@
   NOTE: Once the chain starts the terms are allowed to go above one million.
 */
 
-import { collatzSequence } from '../helper/math.mjs'
+import { collatzSequence } from '../helper/math.js'
 
 function solution (number) {
   let startingTerm = 0
