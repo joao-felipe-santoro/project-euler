@@ -1,3 +1,74 @@
+const digits = {
+  1: 'One',
+  2: 'Two',
+  3: 'Three',
+  4: 'Four',
+  5: 'Five',
+  6: 'Six',
+  7: 'Seven',
+  8: 'Eight',
+  9: 'Nine'
+}
+const teens = {
+  10: 'Ten',
+  11: 'Eleven',
+  12: 'Twelve',
+  13: 'Thirteen',
+  14: 'Fourteen',
+  15: 'Fifteen',
+  16: 'Sexteen',
+  17: 'Seventeen',
+  18: 'Eighteen',
+  19: 'Nineteen'
+}
+const tens = {
+  2: 'Twenty',
+  3: 'Thirty',
+  4: 'Forty',
+  5: 'Fifty',
+  6: 'Sixty',
+  7: 'Seventy',
+  8: 'Eighty',
+  9: 'Ninety'
+}
+
+function toText (number) {
+  const digitsCount = number.toString().length
+  let textValue = ''
+  // if (number < 0 || number > 10000) {
+  //   return 'Valid range is: 1 to 9999'
+  // }
+  if (number === 0) {
+    return ''
+  }
+  if (number < 10) {
+    return textValue.concat(digits[number])
+  }
+  if (number < 20) {
+    return textValue.concat(teens[number])
+  }
+  const remainder = number % (10 ** (digitsCount - 1))
+  const leftDigit = Math.floor(number / (10 ** (digitsCount - 1)))
+  switch (digitsCount) {
+    case 4:
+      textValue = digits[leftDigit].concat('Thousand')
+      if (remainder < 100 && remainder > 0) {
+        textValue = textValue.concat('And')
+      }
+      break
+    case 3:
+      textValue = digits[leftDigit].concat('Hundred')
+      if (remainder !== 0) {
+        textValue = textValue.concat('And')
+      }
+      break
+    case 2:
+      textValue = tens[leftDigit]
+      break
+  }
+  return textValue.concat(toText(remainder))
+}
+
 function collatzSequence (number, memo) {
   let term = number
   let iterations = 1
@@ -63,4 +134,4 @@ function isPalindrome (number) {
   return false
 }
 
-export { collatzSequence, factorial, isPrime, isPalindrome }
+export { collatzSequence, factorial, isPrime, isPalindrome, toText }
