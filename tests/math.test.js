@@ -117,5 +117,11 @@ describe('Math', function () {
     it('Should return "ThreeHundredAndFortyTwo" for 342', function () {
       expect(toText(342)).to.equal('ThreeHundredAndFortyTwo')
     })
+    it('Should return "OneThousandAndFifteen" for 1015', function () {
+      expect(toText(1015)).to.equal('OneThousandAndFifteen')
+    })
+    it('Should return "OneHundredAndOne" for 101', function () {
+      expect(toText(101)).to.equal('OneHundredAndOne')
+    })
   })
 })

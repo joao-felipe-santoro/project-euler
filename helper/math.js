@@ -47,21 +47,26 @@ function toText (number) {
   if (number < 20) {
     return textValue.concat(teens[number])
   }
+  const remainder = number % (10 ** (digitsCount - 1))
+  const leftDigit = Math.floor(number / (10 ** (digitsCount - 1)))
   switch (digitsCount) {
     case 4:
-      textValue = digits[Math.floor(number / (10 ** (digitsCount - 1)))].concat('Thousand')
+      textValue = digits[leftDigit].concat('Thousand')
+      if (remainder < 100 && remainder > 0) {
+        textValue = textValue.concat('And')
+      }
       break
     case 3:
-      textValue = digits[Math.floor(number / (10 ** (digitsCount - 1)))].concat('Hundred')
-      if (number % digitsCount - 1 !== 0) {
+      textValue = digits[leftDigit].concat('Hundred')
+      if (remainder !== 0) {
         textValue = textValue.concat('And')
       }
       break
     case 2:
-      textValue = tens[Math.floor(number / (10 ** (digitsCount - 1)))]
+      textValue = tens[leftDigit]
       break
   }
-  return textValue.concat(toText(number % (10 ** (digitsCount - 1))))
+  return textValue.concat(toText(remainder))
 }
 
 function collatzSequence (number, memo) {
