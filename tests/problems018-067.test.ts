@@ -133,7 +133,7 @@ describe('Problem 018', function () {
   it('Should return 1074 as heaviest path for medium triangle', function () {
     expect(problem018(mediumTriangle)).to.equal(1074)
   })
-  it('Should return XXX as heaviest path for huge triangle', function () {
+  it('Should return 7273 as heaviest path for huge triangle', function () {
     expect(problem018(hugeTriangle)).to.equal(7273)
   })
 })
