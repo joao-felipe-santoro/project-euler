@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { problem018 } from 'problems/problems018-067'
+import { problem018 } from '../src/problems/problems018-067'
 
 const smallTriangle =
 [[3],
