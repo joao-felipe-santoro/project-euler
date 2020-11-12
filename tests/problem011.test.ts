@@ -29,10 +29,12 @@ const matrix4by4 = [
   [2, 0, 1, 3]]
 
 describe('Problem 011', function () {
-  it('Should return 70600674 as the lagest product using 4 adjacent numbers of given 20x20 grid, considering Up, Down, Left, Right and Diagonally', function () {
-    expect(problem011(matrix20by20, 4)).to.equal(70600674)
-  })
   it('Should return 81 as the lagest product using 4 adjacent numbers of given 4x4 grid, considering Up, Down, Left, Right and Diagonally', function () {
     expect(problem011(matrix4by4, 4)).to.equal(81)
+  })
+  it('[SOLUTION]Should return 70600674 as the lagest product using 4 adjacent numbers of given 20x20 grid, considering Up, Down, Left, Right and Diagonally', function () {
+    const solution = problem011(matrix20by20, 4)
+    expect(solution).to.equal(70600674)
+    console.log('Solution:', solution)
   })
 })

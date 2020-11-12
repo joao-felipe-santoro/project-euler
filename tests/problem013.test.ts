@@ -117,7 +117,9 @@ describe('Problem 013', function () {
   it('Should return 10 as the first 2 digit of the sum of given numbers', function () {
     expect(problem013(smallNumbers, 2)).to.equal(10)
   })
-  it('Should return 5537376230 as the first 10 digits of the sum of given numbers', function () {
-    expect(problem013(bigNumbers, 10)).to.equal(5537376230)
+  it('[SOLUTION]Should return 5537376230 as the first 10 digits of the sum of given numbers', function () {
+    const solution = problem013(bigNumbers, 10)
+    expect(solution).to.equal(5537376230)
+    console.log('Solution:', solution)
   })
 })

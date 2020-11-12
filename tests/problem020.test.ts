@@ -17,7 +17,9 @@ describe('Problem 020', function () {
   it('Should return 9 as the sum of the digits in the number 8!', function () {
     expect(problem020(BigInt(8))).to.equal(9)
   })
-  it('Should return 648 as the sum of the digits in the number 100!', function () {
-    expect(problem020(BigInt(100))).to.equal(648)
+  it('[SOLUTION]Should return 648 as the sum of the digits in the number 100!', function () {
+    const solution = problem020(BigInt(100))
+    expect(solution).to.equal(648)
+    console.log('Solution:', solution)
   })
 })

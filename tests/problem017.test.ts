@@ -8,7 +8,9 @@ describe('Problem 017', function () {
   it('Should return 864 as the sum of all letters used to write numbers from 1 to 100', function () {
     expect(problem017([...Array(100 + 1).keys()].slice(1))).to.equal(864)
   })
-  it('Should return 21124 as the sum of all letters used to write numbers from 1 to 1000', function () {
-    expect(problem017([...Array(1000 + 1).keys()].slice(1))).to.equal(21124)
+  it('[SOLUTION]Should return 21124 as the sum of all letters used to write numbers from 1 to 1000', function () {
+    const solution = problem017([...Array(1000 + 1).keys()].slice(1))
+    expect(solution).to.equal(21124)
+    console.log('Solution:', solution)
   })
 })

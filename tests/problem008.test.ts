@@ -13,7 +13,9 @@ describe('Problem 008', function () {
   it('Should return 81 as the highest product of 2 adjecent digits of given 1000-digit number.', function () {
     expect(problem008(sequence, 2)).to.equal(81)
   })
-  it('Should return 23514624000 as the highest product of 13 adjecent digits of given 1000-digit number.', function () {
-    expect(problem008(sequence, 13)).to.equal(23514624000)
+  it('[SOLUTION]Should return 23514624000 as the highest product of 13 adjecent digits of given 1000-digit number.', function () {
+    const solution = problem008(sequence, 13)
+    expect(solution).to.equal(23514624000)
+    console.log('Solution:', solution)
   })
 })

@@ -130,10 +130,16 @@ describe('Problem 018', function () {
   it('Should return 23 as heaviest path for small triangle', function () {
     expect(problem018(smallTriangle)).to.equal(23)
   })
-  it('Should return 1074 as heaviest path for medium triangle', function () {
-    expect(problem018(mediumTriangle)).to.equal(1074)
+  it('[SOLUTION]Should return 1074 as heaviest path for medium triangle', function () {
+    const solution = problem018(mediumTriangle)
+    expect(solution).to.equal(1074)
+    console.log('Solution:', solution)
   })
-  it('Should return 7273 as heaviest path for huge triangle', function () {
-    expect(problem018(hugeTriangle)).to.equal(7273)
+})
+describe('Problem 067', function () {
+  it('[SOLUTION]Should return 7273 as heaviest path for huge triangle', function () {
+    const solution = problem018(hugeTriangle)
+    expect(solution).to.equal(7273)
+    console.log('Solution:', solution)
   })
 })

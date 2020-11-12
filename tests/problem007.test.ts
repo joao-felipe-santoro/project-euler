@@ -14,7 +14,9 @@ describe('Problem 007', function () {
   it('Should return 13 as the 6th prime.', function () {
     expect(problem007(6)).to.equal(13)
   })
-  it('Should return 104743 as the 10.001th prime.', function () {
-    expect(problem007(10001)).to.equal(104743)
+  it('[SOLUTION]Should return 104743 as the 10.001th prime.', function () {
+    const solution = problem007(10001)
+    expect(solution).to.equal(104743)
+    console.log('Solution:', solution)
   })
 })
