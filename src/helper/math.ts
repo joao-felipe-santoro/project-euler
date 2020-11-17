@@ -105,7 +105,7 @@ function isPrime (number: number): boolean {
   }
   return true
 }
-function isPalindrome (number: number, base: number): boolean {
+function isPalindrome (number: number, base = 10): boolean {
   const numString = number.toString(base)
   const invertedString = numString.split('').reverse()
 
