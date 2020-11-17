@@ -50,7 +50,7 @@ describe('Math', function () {
       expect(isPalindrome(1)).to.equal(true)
     })
     it('Should return true for 101', function () {
-      expect(isPalindrome(101, 2)).to.equal(true)
+      expect(isPalindrome(101)).to.equal(true)
     })
     it('Should return false for 100', function () {
       expect(isPalindrome(100, 2)).to.equal(false)
