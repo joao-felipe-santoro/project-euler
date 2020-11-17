@@ -105,27 +105,14 @@ function isPrime (number: number): boolean {
   }
   return true
 }
-function isPalindrome (number: number): boolean {
-  let modulusResult = 0
-  let temp = 0
-  let recomposedNumber = 0
+function isPalindrome (number: number, base: number): boolean {
+  const numString = number.toString(base)
+  const invertedString = numString.split('').reverse()
 
-  temp = number
-
-  while (number > 0) {
-    modulusResult = number % 10
-    number = Math.floor(number / 10)
-    recomposedNumber = recomposedNumber * 10 + modulusResult
-  }
-  if (recomposedNumber === temp) {
+  if (numString === invertedString.join('')) {
     return true
   }
   return false
 }
 
-function toBinary (number: number): number {
-  console.log(number.toString(2))
-  return parseInt(number.toString(2))
-}
-
-export { collatzSequence, factorial, isPrime, isPalindrome, toText, toBinary }
+export { collatzSequence, factorial, isPrime, isPalindrome, toText }
