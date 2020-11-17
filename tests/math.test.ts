@@ -1,13 +1,40 @@
 import { expect } from 'chai'
-import { collatzSequence, factorial, isPrime, isPalindrome, toText } from '../src/helper/math'
+import { collatzSequence, factorial, isPrime, isPalindrome, toText, toBinary } from '../src/helper/math'
 
 describe('Math', function () {
+  describe('toBinary', function () {
+    it('Should return 0 for 0', function () {
+      expect(toBinary(1)).to.eql(1)
+    })
+    it('Should return 1 for 1', function () {
+      expect(toBinary(0)).to.eql(0)
+    })
+    it('Should return 10 for 2', function () {
+      expect(toBinary(2)).to.eql(10)
+    })
+    it('Should return 11 for 3', function () {
+      expect(toBinary(3)).to.eql(11)
+    })
+    it('Should return 100 for 4', function () {
+      expect(toBinary(4)).to.eql(100)
+    })
+    it('Should return 101 for 5', function () {
+      expect(toBinary(5)).to.eql(101)
+    })
+    it('Should return 110 for 6', function () {
+      expect(toBinary(6)).to.eql(110)
+    })
+  })
   describe('collatzSequence', function () {
+    const memo = {}
     it('Should return 10 for 13', function () {
-      expect(collatzSequence(13)).to.eql(10)
+      expect(collatzSequence(13, memo)).to.eql(10)
     })
     it('Should return 5 for 16', function () {
-      expect(collatzSequence(16)).to.eql(5)
+      expect(collatzSequence(16, memo)).to.eql(5)
+    })
+    it('Should return 6 for 5', function () {
+      expect(collatzSequence(5, memo)).to.eql(6)
     })
   })
   describe('factorial', function () {
@@ -32,10 +59,10 @@ describe('Math', function () {
       expect(isPrime(3)).to.equal(true)
     })
     it('Should return false for 4', function () {
-      expect(isPrime(3)).to.equal(true)
+      expect(isPrime(4)).to.equal(false)
     })
     it('Should return true for 5', function () {
-      expect(isPrime(3)).to.equal(true)
+      expect(isPrime(5)).to.equal(true)
     })
     it('Should return true for 6857', function () {
       expect(isPrime(6857)).to.equal(true)
@@ -49,7 +76,7 @@ describe('Math', function () {
       expect(isPalindrome(101)).to.equal(true)
     })
     it('Should return false for 100', function () {
-      expect(isPalindrome(3)).to.equal(true)
+      expect(isPalindrome(100)).to.equal(false)
     })
     it('Should return true for 1001', function () {
       expect(isPalindrome(1001)).to.equal(true)

@@ -122,4 +122,10 @@ function isPalindrome (number: number): boolean {
   }
   return false
 }
-export { collatzSequence, factorial, isPrime, isPalindrome, toText }
+
+function toBinary (number: number): number {
+  console.log(number.toString(2))
+  return parseInt(number.toString(2))
+}
+
+export { collatzSequence, factorial, isPrime, isPalindrome, toText, toBinary }
