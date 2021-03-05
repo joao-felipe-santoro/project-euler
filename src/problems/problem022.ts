@@ -14,6 +14,7 @@ function solution (names: string[]): number {
     let nameValue = 0
     name.split('').map((char) => {
       nameValue += char.charCodeAt(0) - 64
+      return nameValue
     })
     namesScoresSum += (index + 1) * nameValue
   })
