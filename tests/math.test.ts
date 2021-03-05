@@ -9,6 +9,9 @@ describe('Math', function () {
     it('Should return 5 for 16', function () {
       expect(collatzSequence(16)).to.eql(5)
     })
+    it('Should return 6 for 5', function () {
+      expect(collatzSequence(5)).to.eql(6)
+    })
   })
   describe('factorial', function () {
     it('Should return 2 for 2!', function () {
@@ -32,10 +35,10 @@ describe('Math', function () {
       expect(isPrime(3)).to.equal(true)
     })
     it('Should return false for 4', function () {
-      expect(isPrime(3)).to.equal(true)
+      expect(isPrime(4)).to.equal(false)
     })
     it('Should return true for 5', function () {
-      expect(isPrime(3)).to.equal(true)
+      expect(isPrime(5)).to.equal(true)
     })
     it('Should return true for 6857', function () {
       expect(isPrime(6857)).to.equal(true)
@@ -49,7 +52,7 @@ describe('Math', function () {
       expect(isPalindrome(101)).to.equal(true)
     })
     it('Should return false for 100', function () {
-      expect(isPalindrome(3)).to.equal(true)
+      expect(isPalindrome(100, 2)).to.equal(false)
     })
     it('Should return true for 1001', function () {
       expect(isPalindrome(1001)).to.equal(true)
