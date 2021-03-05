@@ -3,15 +3,14 @@ import { collatzSequence, factorial, isPrime, isPalindrome, toText } from '../sr
 
 describe('Math', function () {
   describe('collatzSequence', function () {
-    const memo = {}
     it('Should return 10 for 13', function () {
-      expect(collatzSequence(13, memo)).to.eql(10)
+      expect(collatzSequence(13)).to.eql(10)
     })
     it('Should return 5 for 16', function () {
-      expect(collatzSequence(16, memo)).to.eql(5)
+      expect(collatzSequence(16)).to.eql(5)
     })
     it('Should return 6 for 5', function () {
-      expect(collatzSequence(5, memo)).to.eql(6)
+      expect(collatzSequence(5)).to.eql(6)
     })
   })
   describe('factorial', function () {
